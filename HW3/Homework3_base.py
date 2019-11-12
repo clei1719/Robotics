@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from hw3_data import *
 
 # TODO: INSERT YOUR NAME HERE
-LAST_NAME = "mylastname"
+LAST_NAME = "Eisenzimmer, Clint"
 
 
 def visualize_data(data, cluster_centers_file):
@@ -49,8 +49,11 @@ class KMeansClassifier(object):
     # Fit k clusters to the data, by starting with k randomly selected cluster centers.
     self._cluster_centers = [] # Reset cluster centers array
 
+
+
     # TODO: Initialize k cluster centers at random points
     # HINT: To choose reasonable initial cluster centers, you can set them to be in the same spot as random (different) points from the dataset
+  
 
     # TODO Follow convergence procedure to find final locations for each center
     while True:
@@ -135,12 +138,15 @@ def main():
   # data[0] retrieves the 0th example, a list with 'M' elements, one for each dimension (xy-points would have M=2)
   # labels is an 'N'-element list, where labels[0] is the label for the datapoint at data[0]
 
+  print(len(data))
+
 
   ########## PART 1 ############
   # perform K-means clustering
   kMeans_classifier = KMeansClassifier()
   for datapoint in data:
     kMeans_classifier.add_datapoint(datapoint) # add data to the model
+  # print(data[1])
 
   kMeans_classifier.fit(4) # Fit 4 clusters to the data
 
